@@ -1,0 +1,4 @@
+Terminal: npm install
+Ishga tushirish: npm run dev
+Netlify uchun: npm run build
+Keyin dist papkasini Netlify Deploy oynasiga tashlang.
