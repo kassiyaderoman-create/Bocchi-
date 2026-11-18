@@ -8,7 +8,7 @@ Independent Uzbek fan website, built with React and Vite. Start with `npm instal
 - Animated guitar cursor drawn as a native SVG UI icon.
 - Four Kessoku Band profiles, switchable tabs and keyboard navigation.
 - User-uploaded full STARRY performance, music player and official YouTube embeds.
-- Seven-image filterable gallery. All attached JPEGs are preserved unchanged.
+- Ten-image filterable gallery. All attached JPEGs are preserved unchanged.
 - Responsive navigation, mobile menu, scroll reveals, hover transitions and native accessible media dialogs.
 - Mini soundcheck produces synthesized open-string guitar notes with Web Audio; it is not a recording of an actual guitar.
 - Reduced-motion support and visible keyboard focus.
@@ -27,4 +27,12 @@ Fan-art and user-provided media belong to their respective owners. © Aki Hamaji
 
 Update: seamless portrait marquee featuring all four members, expanded gallery with separate Nijika/Ryo/Kita portraits and per-member filters. The mini-player close control explicitly pauses audio, hides the player and cancels pending playback; the play/pause and close hit areas are enlarged.
 
-The member portrait tape now advances automatically using requestAnimationFrame at 45px/s, wraps seamlessly, remeasures on resize, and has no manual horizontal scrollbar. Explicit user request enables this tape even when system animation preferences disable other decorative animations. Background tabs do not accumulate animation jumps.
+The portrait tape moves at 45 px/s and can be paused. With reduced motion enabled, the tape is stationary and can be scrolled horizontally, and the hero shows a still image.
+
+## Source layout
+
+- `src/main.jsx` mounts React. `src/App.jsx` coordinates the page, media playback and navigation.
+- `src/content.js` contains member profiles, gallery data, navigation links and FAQs. The four ASCII portraits sit above the corresponding member records.
+- `src/components/` contains the page sections and media controls. The group and STARRY sketches are in `Story.jsx` and `Live.jsx`.
+- `src/style.css` contains page, responsive and reduced-motion styles.
+
